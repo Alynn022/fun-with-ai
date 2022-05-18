@@ -4,13 +4,12 @@ const MyContext = createContext()
 
 const MyProvider = props => {
   const [ userInput, setUserInput ] = useState('')
-  const [ prompt, setPrompt ] = useState() 
-
+  const [ responses, setResponses ] = useState([]) 
 
   return (
     <MyContext.Provider value={{
       userInput, setUserInput,
-      prompt, setPrompt
+      responses, setResponses
     }}>
       {props.children}
     </MyContext.Provider>
