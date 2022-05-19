@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { MyContext } from '../Context/Context';
 import getPrompt from '../apiCalls/apiCalls';
+import './UserPromptInput.css';
 
 const UserPromptInput = () => {
   const { userInput, setUserInput } = useContext(MyContext)
@@ -12,26 +13,34 @@ const UserPromptInput = () => {
   }
   
   const saveResponse = () => {
-    getPrompt(userInput)
-    .then(data => {
-      setResponses([{
-        prompt: userInput, 
-        response: data.choices[0].text, 
-      }, ...responses])        
-    })
-    setUserInput('')
+    if (userInput !== '') {
+      getPrompt(userInput)
+      .then(data => {
+        setResponses([{
+          prompt: userInput, 
+          response: data.choices[0].text, 
+        }, ...responses])        
+      })
+      setUserInput('')
+    } else {
+      alert('Please enter a prompt to retrieve response.')
+    }
   }
 
   return(
-    <section className='prompt'>
-      <p>Enter Prompt</p>
-      <input
-        type='text'
-        value={ userInput }
-        onChange={ handleChange }>
-      </input>
-      <button onClick={() => saveResponse()} >Submit</button>
-    </section>
+    <div>
+      <p className='enter-prompt-label'>Enter Prompt</p>
+      <section className='prompt'>
+          <textarea
+            id='enterPrompt'
+            type='text'
+            value={ userInput }
+            onChange={ handleChange }
+            aria-label='Enter-Prompt'
+          /> 
+        <button className='submit-btn' onClick={() => saveResponse()} >Submit</button>
+      </section>
+    </div>  
   )
 }
 

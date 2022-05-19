@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { MyContext } from '../Context/Context';
+import './Responses.css';
 
 const Responses = () => {
   const { responses } = useContext(MyContext)
@@ -8,19 +9,23 @@ const Responses = () => {
     responses.map((response, i) => {
       return (
         <div key={response + i} className='response'>
-          <p className='prompt-text'>Prompt: {response.prompt}</p>
-          <p className='response-text'>Response: {response.response}</p>
+          <div className='text'>
+            <p className='prompt-text'>Prompt:</p>
+            <p>{response.prompt}</p>
+          </div> 
+          <div className='text'>
+            <p className='response-text'>Response:</p>
+            <p>{response.response}</p>
+          </div>  
         </div>  
       )
     })
-  
-
 
   return(
     <section className='responses'>
-      <h2>Responses</h2>
+      <h4>Responses</h4>
       {responses.length > 0 && displayResponses}
-      {responses.length === 0 && <p>You have no responses saved</p>}
+      {responses.length === 0 && <p className='no-response-text'>You have no responses saved</p>}
     </section>  
   )
 }
