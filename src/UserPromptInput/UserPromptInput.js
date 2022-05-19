@@ -18,6 +18,7 @@ const UserPromptInput = () => {
     if (userInput !== '') {
       getPrompt(userInput, engine)
       .then(data => {
+
         setResponses([{
           prompt: userInput, 
           response: data.choices[0].text, 

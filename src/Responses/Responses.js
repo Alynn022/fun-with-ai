@@ -11,11 +11,11 @@ const Responses = () => {
         <div key={response + i} className='response'>
           <div className='text'>
             <p className='prompt-text'>Prompt:</p>
-            <p>{response.prompt}</p>
+            <p className='user-prompt'>{response.prompt}</p>
           </div> 
           <div className='text'>
             <p className='response-text'>Response:</p>
-            <p>{response.response}</p>
+            <p className='user-response'>{response.response}</p>
           </div>  
         </div>  
       )

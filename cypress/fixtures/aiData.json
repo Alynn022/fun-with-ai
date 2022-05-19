@@ -1,0 +1,14 @@
+{
+  "id": "cmpl-uqkvlQyYK7bGYrRHQ0eXlWi7",
+  "object": "text_completion",
+  "created": 1589478378,
+  "model": "text-davinci-002",
+  "choices": [
+    {
+      "text": "This is a test",
+      "index": 0,
+      "logprobs": null,
+      "finish_reason": "length"
+    }
+  ]
+}
