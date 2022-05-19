@@ -1,0 +1,39 @@
+.response,
+.no-response-text {
+  height: fit-content;
+  block-size: fit-content;
+  width: 50vw;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  background-color: #B8CCD9;
+}
+
+.no-response-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+
+.text {
+  display: flex;
+  justify-content: row;
+  align-items: flex-start
+}
+
+.prompt-text, 
+.response-text {
+  margin-left: 1rem;
+  font-weight: 600;
+}
+
+.prompt-text {
+  margin-right: 2rem;
+}
+
+.response-text {
+  margin-right: 0.75rem;
+}
