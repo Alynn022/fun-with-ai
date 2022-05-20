@@ -23,7 +23,7 @@ const Responses = () => {
 
   return(
     <section className='responses'>
-      <h4>Responses</h4>
+      <p className='response-header'>Responses</p>
       {responses.length > 0 && displayResponses}
       {responses.length === 0 && <p className='no-response-text'>You have no responses saved</p>}
     </section>  

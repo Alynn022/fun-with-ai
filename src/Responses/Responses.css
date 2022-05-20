@@ -37,3 +37,7 @@
 .response-text {
   margin-right: 0.75rem;
 }
+
+.response-header {
+  font-weight: 600;
+}
