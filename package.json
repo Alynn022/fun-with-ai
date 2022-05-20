@@ -17,7 +17,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "cypress": "./node_modules/.bin/cypress open"
+    "cypress": "./node_modules/.bin/cypress open",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -39,6 +41,8 @@
   },
   "devDependencies": {
     "cypress": "^9.6.1",
-    "dotenv": "^16.0.1"
-  }
+    "dotenv": "^16.0.1",
+    "gh-pages": "^4.0.0"
+  },
+  "homepage": "http://Alynn022.github.io/fun-with-ai"
 }
