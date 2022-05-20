@@ -11,6 +11,7 @@ const UserPromptInput = () => {
   const { responses, setResponses } = useContext(MyContext)
   const { engine } = useContext(MyContext)
   const [ isLoading, setIsLoading ] = useState(false)
+  const [ error, setError ] = useState('')
 
 
   
@@ -20,18 +21,29 @@ const UserPromptInput = () => {
   
   const saveResponse = () => {
     setIsLoading(true)
-    if (userInput !== '') {
-      getPrompt(userInput, engine)
-      .then(data => {
-        setIsLoading(false)
-        setResponses([{
-          prompt: userInput, 
-          response: data.choices[0].text, 
-        }, ...responses])        
-      })
-      setUserInput('')
-    } else {
-      alert('Please enter a prompt to retrieve response.')
+    getPrompt(userInput, engine)
+    .then(data => {
+      setIsLoading(false)
+      setResponses([{
+        prompt: userInput, 
+        response: data.choices[0].text, 
+      }, ...responses])        
+    })
+    .catch((response) => {
+      if (response.status < 500) {
+        setError(`We're sorry, something went wrong. Either the page doesn't exist, or could not be found.`)
+      } else {
+        setError(`We're sorry, something went wrong with the server. Please try again later`)
+      }
+    }) 
+    setUserInput('')
+  }
+
+  const errorMessage = () => {
+    if(error) {
+      return(
+        <p className='error-message'>{error}</p>
+      )
     }
   }
 
@@ -39,6 +51,7 @@ const UserPromptInput = () => {
     <div>
       <p className='enter-prompt-label'>Enter Prompt</p>
       <section className='prompt'>
+        {errorMessage()}
         {!isLoading && 
           <>
             <textarea
@@ -49,7 +62,7 @@ const UserPromptInput = () => {
               aria-label='Enter-Prompt'
             /> 
             <SelectBox/>
-            <button className='submit-btn' onClick={() => saveResponse()} >Submit</button>
+            <button className='submit-btn' disabled={userInput === ''} onClick={() => saveResponse()} >Submit</button>
           </>
         }
         {isLoading && <Loader/>}
