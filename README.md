@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Fun-With-AI 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+- [Overview](#overview)
+- [Deployed Site](#deployed-site)
+- [Screenshots](#screenshots)
+- [Learning Goal](#learning-goal)
+- [Future Enhancements](#future-enhancements)
+- [Install & Setup](#install-and-setup)
+- [Project Spec & Rubric](#project-spec-and-rubric)
+- [Technologies](#technologies)
 
-## Available Scripts
+## Overview
+This is a React application consuming OpenAI(https://openai.com/api/) to take user prompts and produce a response. Users are able to select from a range of AI engines and view a list of their prompts and AI response. 
 
-In the project directory, you can run:
+## Deployed site
+https://alynn022.github.io/fun-with-ai/
 
-### `npm start`
+## Screenshots 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Home Page View 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img width="900" alt="Screen Shot 2022-05-20 at 11 26 01 AM" src="https://user-images.githubusercontent.com/89872714/169580966-00b05739-96b3-4f6d-ae47-5c3172d2d8df.png">
 
-### `npm test`
+A user can enter a prompt and get a response.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![home-view]()
 
-### `npm run build`
+A user can select from different AI engines. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![engines]()
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Application has a 100% Lighthouse Accessibility Score.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Accessibility-Score]()
 
-### `npm run eject`
+## Learning Goal
+With this appication, I was able to consume an API that uses the POST method to retrieve a response. I enjoyed the initial setup and getting the API to fetch properly. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Future Enhancements
+- Add preset prompts for user to come up with prompt ideas.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Install and Setup
+  1. Clone this repo `git clone git@github.com:Alynn022/fun-with-ai.git`
+  2. Install the necessary package dependencies `npm install`
+  3. Run the command `npm start`
+  4. Start the server at `http://localhost:3000/`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To run tests 
+  1. Run the command `npx cypress run` 
+  2. 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Project Spec and Rubric
+[Shopify-Internship-Application](https://docs.google.com/document/d/1p_kcLTXAbY1zD7TLDOxfirwc3yxZ8Plby0JBzcJRiRw/edit#)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contact on LinkedIn
+- Lynn Nguyen [@lynnnguyen22](https://www.linkedin.com/in/lynnnguyen22/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Technologies 
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- TypeScript 
+- React
+- React Router
+- Cypress
+- JavaScript
+- HTML
+- CSS/SASS
+- Git
+- Figma
+- Webpack
+- Fetch API
