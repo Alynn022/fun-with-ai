@@ -14,25 +14,32 @@
 This is a React application consuming OpenAI(https://openai.com/api/) to take user prompts and produce a response. Users are able to select from a range of AI engines and view a list of their prompts and AI response. 
 
 ## Deployed site
-https://alynn022.github.io/fun-with-ai/
+https://fun-with-ai-lynn.herokuapp.com/
+Note: OpenAI API keys are disabled after deploying application. 
 
 ## Screenshots 
 
 Home Page View 
 
-<img width="900" alt="Screen Shot 2022-05-20 at 11 26 01 AM" src="https://user-images.githubusercontent.com/89872714/169580966-00b05739-96b3-4f6d-ae47-5c3172d2d8df.png">
+<img width="480" alt="Screen Shot 2022-05-20 at 11 26 01 AM" src="https://user-images.githubusercontent.com/89872714/169580966-00b05739-96b3-4f6d-ae47-5c3172d2d8df.png">
 
 A user can enter a prompt and get a response.
 
-![home-view]()
+![prompt](https://media.giphy.com/media/DVgnaC0qZKySnlOpuv/giphy.gif)
 
 A user can select from different AI engines. 
 
-![engines]()
+![engines](https://media.giphy.com/media/TKV78IXHtbnU4UjBh7/giphy.gif)  
 
-Application has a 100% Lighthouse Accessibility Score.
+Application has a 100% Lighthouse Accessibility Score and is accessible with tabbing.
 
-![Accessibility-Score]()
+<img width="480" alt="Screen Shot 2022-05-20 at 3 50 13 PM" src="https://user-images.githubusercontent.com/89872714/169617219-5bd68be8-8d61-4a77-9b02-6c0280c2e7ac.png">
+
+Application is compatible to mobile-view 
+
+<img width="480" alt="Screen Shot 2022-05-20 at 3 46 16 PM" src="https://user-images.githubusercontent.com/89872714/169617365-bf80ce1c-b4b8-446c-9783-d1693cdcfb79.png">
+
+
 
 ## Learning Goal
 With this appication, I was able to consume an API that uses the POST method to retrieve a response. I enjoyed the initial setup and getting the API to fetch properly. 
@@ -48,7 +55,6 @@ With this appication, I was able to consume an API that uses the POST method to 
 
 To run tests 
   1. Run the command `npx cypress run` 
-  2. 
 
 
 ## Project Spec and Rubric
